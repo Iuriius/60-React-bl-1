@@ -1,4 +1,5 @@
-import {Avatar,CardHeader, CardBody, CardFooter, CardPoster, CardText, CardTitle, Card, Tag, UserBox, UserInfo, UserName,Date } from "./BlogCard.styled"
+import { Avatar, CardHeader, CardBody, CardFooter, CardPoster, CardText, CardTitle, Card, Tag, UserBox, UserInfo, UserName, Date } from "./BlogCard.styled"
+import PropTypes from 'prop-types';
 
 export const BlogCard = ({ poster, tag, title, description, name, avatar, postedAt }) => {
   return    <Card>
@@ -26,3 +27,12 @@ export const BlogCard = ({ poster, tag, title, description, name, avatar, posted
   </CardFooter>
 </Card>;
 };
+BlogCard.propTypes = {
+  poster: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  postedAt: PropTypes.string.isRequired,
+} 
