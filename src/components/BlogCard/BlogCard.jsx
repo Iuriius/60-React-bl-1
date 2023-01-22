@@ -1,28 +1,26 @@
-import {CardHeader,} from "./BlogCard.styled"
+import {Avatar,CardHeader, CardBody, CardFooter, CardPoster, CardText, CardTitle, Card, Tag, UserBox, UserInfo, UserName,Date } from "./BlogCard.styled"
 
 export const BlogCard = ({ poster, tag, title, description, name, avatar, postedAt }) => {
-  return
-    <Card>
+  return    <Card>
   <CardHeader>
-    <CardPoster
-      src="https://source.unsplash.com/600x400/?computer"
-      alt="card__image"
+    <CardPoster 
+      src={poster}
+      alt={title}
     />
   </CardHeader>
   <CardBody>
-    <Tag>Technology</Tag>
-    <CardTitle>What's new in 2022 Tech</CardTitle>
+      <Tag>{tag}</Tag>
+      <CardTitle>{title}</CardTitle>
     <CardText>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis
-      molestiae non nemo doloribus. Doloremque, nihil! At ea atque quidem!
+      {description}
     </CardText>
   </CardBody>
   <CardFooter>
     <UserBox>
-      <Avatar src="https://i.pravatar.cc/40?img=1" alt="Jane Doe" />
+      <Avatar src={avatar} alt={name} />
       <UserInfo>
-        <UserName>Jane Doe</UserName>
-        <Date>2h ago</Date>
+          <UserName>{name}</UserName>
+          <Date>{postedAt}</Date>
       </UserInfo>
     </UserBox>
   </CardFooter>
