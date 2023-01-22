@@ -9,6 +9,7 @@ import {
 } from 'components';
 import data from 'data/data.json';
 import article from 'data/article.json';
+import forbes from 'data/forbes.json';
 
 export const App = () => {
   return (
@@ -27,7 +28,7 @@ export const App = () => {
         <Heading marginTop="50px" marginBottom="50px" textAlign="center">
           Task 3
         </Heading>
-        <ForbesList />
+        <ForbesList forbes={forbes} />
 
         <Heading marginTop="50px" marginBottom="50px" textAlign="center">
           Task 4
