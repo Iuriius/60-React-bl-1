@@ -1,4 +1,6 @@
-export const BlogCard = ({poster, tag,title,description, name, avatar, postedAt}) => {
+import {CardHeader,} from "./BlogCard.styled"
+
+export const BlogCard = ({ poster, tag, title, description, name, avatar, postedAt }) => {
   return
     <Card>
   <CardHeader>
